@@ -1,0 +1,98 @@
+<head>
+  <link href='http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css' rel='stylesheet' type='text/css' />
+  <style>
+  #footer{
+    display: table;
+    text-align: light;
+    margin-left: auto;
+    margin-right: auto;
+}
+#ti{
+  font-family: ‘Nanum Brush Script’, Helvetica, Arial, sans-serif;
+}
+
+    
+  </style>
+
+</head>  
+<body>
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          
+            <% if user_signed_in? %>
+            <%= current_user.email %>
+            <a class="navbar-brand" href="/users/sign_out">LOGOUT</a>
+            <% else %>
+            <a class="navbar-brand" href="/users/sign_in">LOGIN</a>
+            <% end %>
+            
+            
+          
+         
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <% if user_signed_in? %>
+                <a class="nav-link" href="../houses/new" target="_self">Link</a>
+                <% end %>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="text" placeholder="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+        
+    
+        <div class="jumbotron">
+          <h1 class="display-3" id="ti" >다 방 구</h1>
+         
+          <p class="lead">대한민국에서 가장 간단한 집계약 웹 사이트 입니다.</p>
+          <hr class="my-4">
+          <p>The simplest house contract website in Korea.</p>
+ 
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <img src="place1.JPG" class="rounded float-left" width="300" height="300" alt="place1">
+                </div>
+                <div class="col-sm-6 col-md-3">
+                     <img src="place2.JPG" class="rounded float-right" width="300" height="300" alt="place2">
+                </div>
+                
+                <div class="col-md-3 col-md-3">
+                     <img src="place3.JPG" class="rounded float-left" width="300" height="300" alt="place3">
+                </div>
+                <div class="col-md-3 col-md-3">
+                     <img src="place4.JPG" class="rounded float-right" width="300" height="300" alt="place4">
+                </div>
+            </div>
+
+        </div>
+        </br>
+        
+        <footer class="container">
+            <div class="row">
+                <div class="span12">
+
+                    <p class="copyright">&copy; made by jiyeon</p>
+                    <p class="copyright">문제가 있을 시 연락 주세요. 010-7405-0522</p>
+
+                </div>
+            </div>
+        </footer>
+        
+</body>
